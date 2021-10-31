@@ -1,29 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('run') {
+        stage('Compiling') {
             steps {
-                echo 'Clarusway_Way to Reinvent Yourself'
-                sh 'python --version'
-                sh 'python pipeline.py'
+                echo 'Compiling the java source code'
+                sh 'javac Hello.java'
             }
         }
-        stage('Sumyee') {
+        stage('Running') {
             steps {
-                echo 'Welcome to symeyyee stage'
-                sh 'python sumyee.py'
-            }
-        }
-        stage('Abbi') {
-            steps {
-                echo 'welcome to abbi stage'
-                sh 'python abbi.py'
-            }
-        }
-        stage('Hiba') {
-            steps {
-                echo 'welcome to Hiba stage'
-                sh 'python abbi.py'
+                echo 'Running the compiled java code.'
+                sh 'java Hello'
             }
         }
     }
