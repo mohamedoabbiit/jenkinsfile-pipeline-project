@@ -20,5 +20,11 @@ pipeline {
                 sh 'python abbi.py'
             }
         }
+        stage('Hiba') {
+            steps {
+                echo 'welcome to Hiba stage'
+                sh 'python abbi.py'
+            }
+        }
     }
 }
