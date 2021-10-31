@@ -13,5 +13,11 @@ pipeline {
                 sh 'java Hello'
             }
         }
+        stage('Fixed') {
+            steps {
+                echo 'Completed'
+                
+            }
+        }
     }
 }
