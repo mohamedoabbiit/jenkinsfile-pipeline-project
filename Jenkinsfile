@@ -8,5 +8,17 @@ pipeline {
                 sh 'python pipeline.py'
             }
         }
+        stage('Sumyee') {
+            steps {
+                echo 'Welcome to symeyyee stage'
+                sh 'python sumyee.py'
+            }
+        }
+        stage('Abbi') {
+            steps {
+                echo 'welcome to abbi stage'
+                sh 'python abbi.py'
+            }
+        }
     }
 }
